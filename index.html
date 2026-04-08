@@ -485,19 +485,12 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
   const overlay = document.getElementById('lbOverlay');
   const img = document.getElementById('lbImg');
   const counter = document.getElementById('lbCounter');
-  function preload(i){
-    var idx = ((i % total) + total) % total;
-    var p = new Image();
-    p.src = imgs[idx];
-  }
   function open(i){
     cur = ((i % total) + total) % total;
     img.src = imgs[cur];
     counter.textContent = (cur + 1) + ' / ' + total;
     overlay.classList.add('lb-visible');
     document.body.style.overflow = 'hidden';
-    preload(cur + 1);
-    preload(cur + 2);
   }
   function close(){
     overlay.classList.remove('lb-visible');
@@ -531,7 +524,7 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
     <div class="ws-item" role="listitem"><div class="ws-num">01</div><div class="ws-line"></div><div class="ws-content"><div class="ws-title">Bellen is genoeg</div><div class="ws-desc">Kleine klus? Dan plannen ik direct iets in en gaan ik ter plekke aan de slag. Groter project? Dan komen ik langs, kijken rustig mee en sturen u binnen 24 uur een heldere offerte.</div></div></div>
     <div class="ws-item" role="listitem"><div class="ws-num">02</div><div class="ws-line"></div><div class="ws-content"><div class="ws-title">Ik passen mijn aan u aan</div><div class="ws-desc">Ik werk wanneer het u uitkomt. Of dat nu doordeweeks is, op zaterdag, of in fases, ik stemmen de planning op u af, niet andersom. U krijgt vooraf een duidelijke tijdlijn.</div></div></div>
     <div class="ws-item" role="listitem"><div class="ws-num">03</div><div class="ws-line"></div><div class="ws-content"><div class="ws-title">Strak werk, nette aftocht</div><div class="ws-desc">Ik schilder niet alleen, ik beschermen ook. Alles wat niet geschilderd hoort te worden, wordt afgedekt. Als ik vertrekken, merkt u alleen het resultaat.</div></div></div>
-    <div class="ws-item" role="listitem"><div class="ws-num">04</div><div class="ws-line"></div><div class="ws-content"><div class="ws-title">Klaar als u het zegt</div><div class="ws-desc">U keurt het werk goed. Pas dan ben ik tevreden. En mocht er binnen twee jaar iets niet kloppen, ik lossen het op, zonder discussie en zonder kosten.</div></div></div>
+    <div class="ws-item" role="listitem"><div class="ws-num">04</div><div class="ws-line"></div><div class="ws-content"><div class="ws-title">Klaar als u het zegt</div><div class="ws-desc">U keurt het werk goed. Pas dan ben ik tevreden. En mocht er binnen twee jaar iets niet kloppen, dan los ik het op, zonder discussie en zonder kosten.</div></div></div>
   </div>
 </section>
 <div class="brand-balk">
@@ -595,7 +588,7 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
     <div class="faq-list" role="list">
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Hoe snel kan ik een offerte verwachten?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ik stuur u binnen 24 uur na het eerste contact een vrijblijvende offerte. Bij grotere projecten plannen ik een kort bezoek in voor een nauwkeurige inschatting.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">In welke regio&#39;s zijn jullie actief?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ik werk in Enschede en de directe omgeving, waaronder Enschede, Oldenzaal, Hengelo, Almelo.</div></div></div>
-      <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Geven jullie garantie op het werk?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ja. Op al mijn werkzaamheden geven ik twee jaar werkgarantie. Ontstaat er een probleem binnen die periode, lossen ik het kosteloos op.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Geven jullie garantie op het werk?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ja. Op al mijn werkzaamheden geven ik twee jaar werkgarantie. Ontstaat er een probleem binnen die periode, los ik het kosteloos op.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Moeten ik zelf materiaal regelen?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Nee, ik regel alles. Van verf tot schildersfolie, transparant opgenomen in de offerte.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Werken jullie ook voor bedrijven?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ja, ik werk voor zowel particulieren als bedrijfspanden, kantoren en VvE&#39;s. Neem contact op voor een maatwerkofferte.</div></div></div>
     </div>
